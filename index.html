@@ -3,7 +3,7 @@
         <title>Tetris Game Javascript</title>
         <style>
             #container {
-                display:block;
+                display: block;
                 margin: 0 auto;
                 width: 270px;
             }
@@ -26,27 +26,7 @@
                 border-radius: 5px;
             }
             
-            form {
-                text-align: center;
-            }
             
-            button {
-                width: 200px;
-                height: 50px;
-                text-align: center;
-                background-color: orange;
-                border: 1px solid brown;
-                border-radius: 10px;
-                font-size: 25px;
-                font-weight: bold;
-                font-family: monospace;
-            }
-            
-            a {
-                text-decoration: none;
-                color: brown;
-                text-transform: uppercase;
-            }
 
             #gameover {
                 text-transform: uppercase;
@@ -55,8 +35,29 @@
                 font-weight: bold;
                 z-index: 1;
                 position: absolute;
-                top: 125;
+                top: 100;
                 color: black;
+            }
+            
+            button {
+                width: 270px;
+                height: 50px;
+                background-color: orange;
+                border: 1px solid brown;
+                border-radius: 10px;
+                font-size: 25px;
+                font-weight: bold;
+                font-family: monospace;
+                z-index: 1;
+                position: absolute;
+                top: 220;
+                display: none;
+            }
+            
+            a {
+                text-decoration: none;
+                color: brown;
+                text-transform: uppercase;
             }
             
             ul {
@@ -70,15 +71,14 @@
     <body>
         <div id="container">
             <p id="gameover"></p>
+            <button id="playagain"><a href="index.html">Play again!</a></button>
             <canvas id = "tetris" width="200" height="400"></canvas>
             <div>
                 Score : <div id="score">0</div>
             </div>
             <script src="tetrominoes.js"></script>
             <script src="tetris.js"></script>
-            <form>
-                <button><a href="index.html">Play again!</a></button>
-            </form>
+            
             <ul id="controls">Controls:
                 <li>Up-Arrow: Rotate</li>
                 <li>Down-Arrow: Move Down</li>
