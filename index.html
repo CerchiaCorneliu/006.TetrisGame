@@ -1,0 +1,90 @@
+<html>
+    <head>
+        <title>Tetris Game Javascript</title>
+        <style>
+            #container {
+                display:block;
+                margin: 0 auto;
+                width: 270px;
+            }
+            
+            #score {
+                display: inline-block;
+            }
+            
+            div {
+                font-size: 25px;
+                font-weight: bold;
+                font-family: monospace;
+                text-align: center;
+            }
+            
+            canvas {
+                display: block;
+                margin: 0 auto;
+                border: 3px solid burlywood;
+                border-radius: 5px;
+            }
+            
+            form {
+                text-align: center;
+            }
+            
+            button {
+                width: 200px;
+                height: 50px;
+                text-align: center;
+                background-color: orange;
+                border: 1px solid brown;
+                border-radius: 10px;
+                font-size: 25px;
+                font-weight: bold;
+                font-family: monospace;
+            }
+            
+            a {
+                text-decoration: none;
+                color: brown;
+                text-transform: uppercase;
+            }
+
+            #gameover {
+                text-transform: uppercase;
+                font-size: 50px;
+                font-family: monospace;
+                font-weight: bold;
+                z-index: 1;
+                position: absolute;
+                top: 125;
+                color: black;
+            }
+            
+            ul {
+                list-style: none;
+                font-size: 15px;
+                padding-left: 1;
+            }
+            
+        </style>
+    </head>
+    <body>
+        <div id="container">
+            <p id="gameover"></p>
+            <canvas id = "tetris" width="200" height="400"></canvas>
+            <div>
+                Score : <div id="score">0</div>
+            </div>
+            <script src="tetrominoes.js"></script>
+            <script src="tetris.js"></script>
+            <form>
+                <button><a href="index.html">Play again!</a></button>
+            </form>
+            <ul id="controls">Controls:
+                <li>Up-Arrow: Rotate</li>
+                <li>Down-Arrow: Move Down</li>
+                <li>Right-Arrow: Move Right</li>
+                <li>Left-Arrow: Move Left</li>  
+            </ul>   
+        </div>
+    </body>
+</html>
