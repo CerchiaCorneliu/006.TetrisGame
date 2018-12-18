@@ -53,7 +53,8 @@ const PIECES = [
 
 function randomPiece(){
     let r = randomN = Math.floor(Math.random() * PIECES.length) // 0 -> 6
-    return new Piece( PIECES[r][0],PIECES[r][1])
+    return new Piece( PIECES[r][0],PIECES[r][1]);
+    // document.getElementById("play").style.display = "block";
 }
 
 let p = randomPiece();
